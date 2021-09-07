@@ -14,7 +14,7 @@ import java.util.TimerTask;
 public class Main {
     private static String TOKEN;
     public static JDA jda;
-    public static int attuiTemp;
+    public static float attuiTemp;
 
     public static void main(String[] args) throws Exception {
 
@@ -24,7 +24,7 @@ public class Main {
         if (args.length <= 1)
             attuiTemp = 45;
         else
-            attuiTemp = Integer.parseInt(args[1]);
+            attuiTemp = Float.parseFloat(args[1]);
 
         TOKEN = args[0];
         jda = JDABuilder.createDefault(TOKEN).build();
